@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2022-08-31 22:34:38
- * @LastEditTime: 2022-08-31 23:21:43
+ * @LastEditTime: 2022-09-10 11:58:11
  * @FilePath: /tensorrt-plugin/README.md
 -->
 # tensorrt-plugin
@@ -13,7 +13,7 @@
 @[双愚](https://github.com/HuangCongQing/) , 若fork或star请注明来源
 
 
-
+*入门例子：给输入张量所有元素加上同一个值 [05-Plugin/usePluginV2DynamicExt/AddScalarPlugin.cu](05-Plugin/usePluginV2DynamicExt/AddScalarPlugin.cu)
 
 
 
