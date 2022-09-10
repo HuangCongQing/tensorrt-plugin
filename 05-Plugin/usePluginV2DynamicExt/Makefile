@@ -1,4 +1,4 @@
-include ../../Makefile.inc
+include ../../Makefile.inc # 编译文件不能忘
 
 SOURCE_CU   = $(shell find . -name '*.cu' 2>/dev/null)
 SOURCE_PY   = $(shell find . -name '*.py' 2>/dev/null)
