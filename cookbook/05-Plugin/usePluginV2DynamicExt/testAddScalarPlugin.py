@@ -20,7 +20,7 @@ import numpy as np
 import os
 import tensorrt as trt
 
-soFile = "./AddScalarPlugin.so"
+soFile = "./AddScalarPlugin.so" # 调用so文件
 np.random.seed(97)
 
 def printArrayInfomation(x, info="", n=5):
@@ -49,13 +49,14 @@ def getAddScalarPlugin(scalar):
             return c.create_plugin(c.name, trt.PluginFieldCollection(parameterList))
     return None
 
+# 主函数=======================
 def run(shape, scalar):
     testCase = "<shape=%s,scalar=%f>" % (shape, scalar)
     trtFile = "./model-Dim%s.plan" % str(len(shape))
     print("Test %s" % testCase)
     logger = trt.Logger(trt.Logger.ERROR)
     trt.init_libnvinfer_plugins(logger, '')
-    ctypes.cdll.LoadLibrary(soFile)
+    ctypes.cdll.LoadLibrary(soFile) # 加载so文件
     if os.path.isfile(trtFile):
         with open(trtFile, "rb") as f:
             engine = trt.Runtime(logger).deserialize_cuda_engine(f.read())
@@ -128,7 +129,7 @@ def run(shape, scalar):
 if __name__ == "__main__":
     os.system("rm -rf ./*.plan")
     np.set_printoptions(precision=3, linewidth=100, suppress=True)
-    run([32], 1)
+    run([32], 1) # 调用def run
     run([32, 32], 1)
     run([16, 16, 16], 1)
     run([8, 8, 8, 8], 1)
