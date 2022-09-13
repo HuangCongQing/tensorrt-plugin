@@ -7,7 +7,7 @@
 + 运行方法
 ```shell
 cd ./loadNpz
-make
+make # 得到so文件
 make test
 ```
 + 参考输出结果，见 ./loadNpz/result.log

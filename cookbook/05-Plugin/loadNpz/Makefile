@@ -1,11 +1,11 @@
 include ../../Makefile.inc
 
 LD_LZ       = -lz
-SOURCE_CU   = $(shell find . -name '*.cu' 2>/dev/null)
-SOURCE_PY   = $(shell find . -name 'test*.py' 2>/dev/null)
+SOURCE_CU   = $(shell find . -name '*.cu' 2>/dev/null) # ./LoadNpzPlugin.cu  2>指代错误输出
+SOURCE_PY   = $(shell find . -name 'test*.py' 2>/dev/null) # 测试py文件路径
 OBJ         = $(shell find . -name *.o 2>/dev/null)
 DEP         = $(OBJ:.o=.d)
-TARGET_SO   = $(SOURCE_CU:.cu=.so)
+TARGET_SO   = $(SOURCE_CU:.cu=.so) # so文件
 
 -include $(DEP)
 
@@ -26,7 +26,7 @@ cnpy.o: cnpy.cpp
 test:
 	make clean
 	make -j2
-	python3 createData.py
+	python3 createData.py # 执行文件
 	python3 $(SOURCE_PY)
 
 .PHONY: clean
