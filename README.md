@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2022-08-31 22:34:38
- * @LastEditTime: 2022-09-14 00:03:55
+ * @LastEditTime: 2022-09-14 00:07:03
  * @FilePath: /tensorrt-plugin/README.md
 -->
 # tensorrt-plugin
@@ -16,15 +16,16 @@
 ## cookbook Example
 环境安装
 ```
-pip install -r re
+pip install -r cookbook/requirements.txt
 ```
 
 ### 05-Plugin
-> cookbook/05-Plugin/README.md
+> [cookbook/05-Plugin/README.md](cookbook/05-Plugin/README.md)
 
 *入门例子：给输入张量所有元素加上同一个值 [05-Plugin/usePluginV2DynamicExt/AddScalarPlugin.cu](05-Plugin/usePluginV2DynamicExt/AddScalarPlugin.cu)
 
 ### 06-PluginAndParser
+> [cookbook/06-PluginAndParser/README.md](cookbook/06-PluginAndParser/README.md)
 
 ## 参考资料
 
