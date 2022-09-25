@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2022-08-31 22:34:38
- * @LastEditTime: 2022-09-14 00:07:03
+ * @LastEditTime: 2022-09-25 18:15:56
  * @FilePath: /tensorrt-plugin/README.md
 -->
 # tensorrt-plugin
@@ -18,6 +18,9 @@
 ```
 pip install -r cookbook/requirements.txt
 ```
+
+### cookbook/04-Parser
+> [cookbook/04-Parser/README.md](cookbook/04-Parser/README.md)
 
 ### 05-Plugin
 > [cookbook/05-Plugin/README.md](cookbook/05-Plugin/README.md)
